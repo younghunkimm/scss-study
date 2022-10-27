@@ -1,0 +1,66 @@
+@use 'sass:map';
+
+@import
+"./layouts/index",
+"./components/index",
+"./base/index",
+"./abstracts/index";
+
+$breakpoints: (
+  small: 35em,
+  medium: 65em,
+  large: 90em
+);
+
+@mixin mq($key) {
+  $size: map.get($breakpoints, $key);
+
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+.card {
+  padding: 1em;
+
+  &-title {
+    font-size: 1.5rem;
+    background-color: mix(red, black, 10%);
+  }
+
+  &-body {
+    color: rgba(#ab4c4a, .5);
+  }
+
+  @include mq(small) {
+    padding: 2em;
+  }
+}
+
+.btn {
+  padding: 1em;
+  color: red;
+  background: pink;
+  display: inline-block;
+
+  & + & {
+    margin-left: 1em;
+  }
+
+  @include mq(medium) {
+    color: black;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+
+    li {
+      padding: .25em;
+
+      a { color: black; }
+    }
+  }
+}

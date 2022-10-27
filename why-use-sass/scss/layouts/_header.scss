@@ -1,0 +1,27 @@
+header {
+  position: relative;
+  z-index: 1;
+  padding: calc(var(--section-spacing) * 1.5) 0;
+  text-align: center;
+
+  h1 {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    span {
+      --font-weight: 100;
+      --font-weight-start: 100;
+      --font-weight-end: 95;
+
+      // @supports (@property) {}
+      animation: weightChange 1500ms 500ms ease-in-out forwards;
+    }
+  }
+
+  p {
+    max-width: 48ch !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

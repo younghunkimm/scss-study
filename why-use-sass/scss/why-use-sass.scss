@@ -1,0 +1,36 @@
+@import "base/index";
+
+.container {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    border: 1px solid rgba(#f00, .2);
+    background-color: rgba(#f00, .1);
+    text-align: center;
+    line-height: 40px;
+  }
+}
+
+$columns: 12;
+
+[class^=col-] {
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      flex: 0 0 (100% / ($columns / $i));
+    }
+  
+    .col-offset-#{$i} {
+      margin-left: 100% / ($columns / $i);
+    }
+  }
+}

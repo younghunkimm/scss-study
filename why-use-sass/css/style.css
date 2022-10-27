@@ -1,0 +1,81 @@
+header {
+  position: relative;
+  z-index: 1;
+  padding: calc(var(--section-spacing) * 1.5) 0;
+  text-align: center;
+}
+header h1 {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+header h1 span {
+  --font-weight: 100;
+  --font-weight-start: 100;
+  --font-weight-end: 95;
+  -webkit-animation: weightChange 1500ms 500ms ease-in-out forwards;
+          animation: weightChange 1500ms 500ms ease-in-out forwards;
+}
+header p {
+  max-width: 48ch !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#section {
+  width: 1200px;
+}
+
+button {
+  height: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 1em;
+}
+.card-title {
+  font-size: 1.5rem;
+  background-color: #1a0000;
+}
+.card-body {
+  color: rgba(171, 76, 74, 0.5);
+}
+@media (min-width: 35em) {
+  .card {
+    padding: 2em;
+  }
+}
+
+.btn {
+  padding: 1em;
+  color: red;
+  background: pink;
+  display: inline-block;
+}
+.btn + .btn {
+  margin-left: 1em;
+}
+@media (min-width: 65em) {
+  .btn {
+    color: black;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  padding: 0.25em;
+}
+nav ul li a {
+  color: black;
+}
