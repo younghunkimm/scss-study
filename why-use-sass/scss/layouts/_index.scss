@@ -1,1 +1,2 @@
-@import "header", "section";
+@forward 'header';
+@forward 'section';

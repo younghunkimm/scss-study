@@ -1,1 +1,3 @@
-@import "buttons", "cta", "price";
+@forward 'buttons';
+@forward 'cta';
+@forward 'price';

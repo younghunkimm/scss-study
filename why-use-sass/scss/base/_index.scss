@@ -1,1 +1,5 @@
-@import "base", "font-face", "reset", "root", "typography"
+@forward "base";
+@forward "font-face";
+@forward "reset";
+@forward "root";
+@forward "typography;
